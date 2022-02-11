@@ -24,7 +24,7 @@
 		  headers: {
 			  'content-type': 'application/json'
 		  },
-		  body: JSON.stringify(charity)
+		  body: JSON.stringify(newData),
 	});
 	console.log(res);
 	//redirection
