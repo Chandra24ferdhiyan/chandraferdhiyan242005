@@ -7,7 +7,12 @@
 	import Loader from '../components/Loader.svelte';
 
 	let
-	amount, name, email, agree = false;
+	amount = 0, name, email, agree = false,
+	contribute = 0;
+
+	$:if($charity) {
+		contribute = Math.floor((parseInt(amount) / $charity.target) *100);
+	}
 	
 	getCharity($params.id);
 
@@ -16,6 +21,7 @@
 	}
 
 	async function handleForm(event) {
+		agree = false;
 		const newData = await getCharity($params.id);
 		newData.pledged = newData.pledged + parseInt(amount);
 		try {
@@ -87,7 +93,12 @@
 	<p class="small">To learn more about make donate charity
 	with us visit our "<span class="color-green">Contact
 	us</span>" site. By calling <span class=
-	"color-green">+62 857 0213 4368</span>.</p><span class=
+	"color-green">+62 857 0213 4368</span>
+	.
+	</p>
+	<h5>Your donation will be contributing 
+	<strong>{contribute}%</strong>of total current donation.</h5>
+	<span class=
 	"xs-separetor v2"></span>
 	</div><!-- .xs-heading end -->
 	<form 
