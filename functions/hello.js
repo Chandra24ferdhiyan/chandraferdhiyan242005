@@ -3,4 +3,4 @@ exports.handler = function(event, context, callback) {
         statusCode: 200,
         body: "hello, lambda functions!"
     })
-}
+};
