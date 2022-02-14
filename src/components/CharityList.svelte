@@ -1,6 +1,6 @@
 <script>
   import { fade, slide, fly } from 'svelte/transition';
-  import { charities } from '../stores.js';
+  import { charities } from '../stores/data.js';
   import Modal from "./Modal.svelte";
   import Loader from "./Loader.svelte";
 
