@@ -1,6 +1,6 @@
 <script>
-	import { charity, getCharity } from "../stores/data.js";
-	import { params } from "../stores/pages.js";
+	import { charity, getCharity } from "../stores.js";
+	import { params } from "../stores.js";
 	import router from 'page';
     import Header from '../components/Header.svelte';
     import Footer from '../components/Footer.svelte';

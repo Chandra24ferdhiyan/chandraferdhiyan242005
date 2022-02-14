@@ -1,6 +1,6 @@
 <script>
     import router from 'page';
-    import { page, params } from './stores/pages.js';
+    import { page, params } from './stores.js';
     import Home from './pages/Home.svelte';
     import About from './pages/About.svelte';
     import Contact from './pages/Contact.svelte';
